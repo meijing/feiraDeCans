@@ -1,13 +1,18 @@
 
  <div class="menu">
     <ul>
-      <li><%= link_to 'Próxima feira', feiras_path%></li>
-      <li><%= link_to 'Feiras anteriores', listFeiras_path%></li>
+      <li><%= link_to 'Quenes somos', feiras_path%></li>
+      <li><%= link_to 'Feiras', listFeiras_path%></li>
       <li style="background:#666"><%= link_to 'Campionato de caza de raposo', listFeiras_path%></li>
+      <li><%= link_to 'Anuncios', anuncios_path%> </li>
+      <li><%= link_to 'Contacto', contacto_path%> </li>
     </ul>
 </div>
 
 <div class="body_content">
+  <Iframe title = "reproductor de vídeo de YouTube" class = "youtube-jugador" type = "text / html"
+  width = "640" height = "390" src = "http://www.youtube.com/embed/W-Q7RMpINVo"
+  frameborder = "0" allowFullScreen/>
   <div class="cabeceiraFeiras">Campeonato provincial de caza de raposo</div>
 
 <div id="wrapper">
@@ -27,5 +32,3 @@
     });
     </script>
 
-
-</div>

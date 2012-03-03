@@ -1,0 +1,27 @@
+<h1>Listing libro_visita</h1>
+
+<table>
+  <tr>
+    <th>Comentario</th>
+    <th>Dia</th>
+    <th>Hora</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @libro_visita.each do |libro_visitum| %>
+  <tr>
+    <td><%= libro_visitum.comentario %></td>
+    <td><%= libro_visitum.dia %></td>
+    <td><%= libro_visitum.hora %></td>
+    <td><%= link_to 'Show', libro_visitum %></td>
+    <td><%= link_to 'Edit', edit_libro_visitum_path(libro_visitum) %></td>
+    <td><%= link_to 'Destroy', libro_visitum, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Libro visitum', new_libro_visitum_path %>

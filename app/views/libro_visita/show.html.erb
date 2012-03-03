@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Comentario:</b>
+  <%= @libro_visitum.comentario %>
+</p>
+
+<p>
+  <b>Dia:</b>
+  <%= @libro_visitum.dia %>
+</p>
+
+<p>
+  <b>Hora:</b>
+  <%= @libro_visitum.hora %>
+</p>
+
+
+<%= link_to 'Edit', edit_libro_visitum_path(@libro_visitum) %> |
+<%= link_to 'Back', libro_visita_path %>

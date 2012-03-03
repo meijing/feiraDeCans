@@ -3,30 +3,33 @@
   Formatting applies to all frontend.
 */
 
-body {
-  background: red;
-  font-family: Verdana;
-  font-size: 13px;
-  line-height: 18px;
-}
-
 .body_content{
   float: left;
-  width: 90%;
+  width: 940px;
   background: white;
-  color: blue;
+  color: darkslategrey;
   padding: 20px;
   border:3px solid darkslategrey;
-  margin-left: 3%;
+  margin-left: 10%;
+  margin-right: auto;
 }
 
 .body_content img{
-    margin-left: 30%;
+    margin-left: 10%;
+}
+
+.cartelPortada{
+    
+}
+
+.corpoQuenesSomos{
+    margin-top: 4%;
 }
 
 .menu {
-    width: 80%;
-    margin-left: 56%;
+    width: 940px;
+    margin-left: 25%;
+    margin-right: auto;
     margin-top: 7%;
 }
 
@@ -66,8 +69,10 @@ body {
 }
 
 .listFeiras {
-  width: 80px;
+  width: 10%;
   float:left;
+  margin-left: 2%;
+  border-right:3px solid darkslategrey;
 }
 
 .listFeiras ul {
@@ -76,7 +81,7 @@ body {
 }
 
 .listFeiras ul li {
-  margin-right: 10px;
+  margin-right: 8px;
   margin-top: 50px;
   margin-bottom: 50px;
   text-decoration: none;
@@ -100,3 +105,74 @@ body {
     border-bottom:3px solid darkslategrey;
 }
 
+.novoAnuncio{
+    width: 150px;
+    background-color: lightgray;
+    float: right;
+    margin: 0 auto 0 auto;
+    padding-left: 30px;
+}
+
+.novoAnuncio a{
+  padding: 5px 10px;
+  color: yellowgreen;
+  font-weight: bold;
+  background-color: darkslategrey;
+}
+
+.novoAnuncio a:hover{
+    background-color: yellowgreen;
+    color: darkslategrey;
+}
+
+.novoAnuncio a:visited{
+  color: yellowgreen;
+  background-color: darkslategrey;
+}
+
+.novoAnuncio img{
+    width: 20px;
+    height: 20px;
+    background-color: darkslategrey;
+}
+
+.tituloAnuncio{
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.tituloAnuncio a{
+  display: block;
+  padding: 5px 10px;
+  text-decoration: none;
+  font-weight: bold;
+  color: darkslategrey;
+}
+
+.tituloAnuncio a:hover{
+  display: block;
+  padding: 5px 10px;
+  text-decoration: none;
+  font-weight: bold;
+  background-color: yellowgreen;
+}
+
+.col1{
+   position: relative;
+   overflow: hidden;
+   float: left;
+   width: 350px;
+   background-color: #e6e6e6;
+   margin-top: 5px;
+   height: 100px;
+}
+.col2{
+   position: relative;
+   overflow: hidden;
+   float: left;
+   width: 350px;
+   left: 3%;
+   background-color: #e6e6e6;
+   margin-top: 5px;
+   height: 100px;
+}

@@ -1,9 +1,11 @@
 
  <div class="menu">
     <ul>
-      <li><%= link_to 'Próxima feira', feiras_path%></li>
-      <li style="background:#666"><%= link_to 'Feiras anteriores', listFeiras_path%></li>
+      <li><%= link_to 'Quenes', feiras_path%></li>
+      <li style="background:#666"><%= link_to 'Feiras', listFeiras_path%></li>
       <li><%= link_to 'Campionato de caza de raposo', campeonato_path%></li>
+      <li><%= link_to 'Anuncios', anuncios_path%> </li>
+      <li><%= link_to 'Contacto', contacto_path%> </li>
     </ul>
 </div>
 
@@ -14,6 +16,7 @@
       <% @feiras.each do |feira| %>
         <li><%= link_to feira.nome, feira %></li>
       <%  end %>
+        <li><%=link_to 'Videos', contacto_path %></li>
       </ul>
   </div>
 
@@ -23,8 +26,8 @@
             <div class="ribbon"></div>
             <div id="slider" class="nivoSlider">
                 <% @nomeImaxes.each do |imaxe| %>
-  <%= image_tag imaxe%>
-  <%end%>
+                  <%= image_tag imaxe%>
+                <%end%>
                 
             </div>
            

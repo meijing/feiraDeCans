@@ -29,7 +29,6 @@ class FeirasController < ApplicationController
     @feiras = Feira.all
     respond_to do |format|
       format.html  #show.html.erb
-      format.xml  { render :xml => [@nomeImaxes,@feiras, @feira]  }
     end
   end
 
@@ -108,6 +107,14 @@ class FeirasController < ApplicationController
     respond_to do |format|
       format.html # campeonato.html.erb
       format.xml  { render :xml => @feiras }
+    end
+  end
+
+  def contacto
+
+    respond_to do |format|
+      format.html # contacto.html.erb
+      format.xml  { render :xml }
     end
   end
 end

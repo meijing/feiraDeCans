@@ -1,4 +1,10 @@
 Proba::Application.routes.draw do
+  resources :visits
+
+  resources :anuncios
+
+  resources :libro_visita
+
   resources :feiras
 
   # The priority is based upon order of creation:
@@ -6,6 +12,7 @@ Proba::Application.routes.draw do
   match '/feiras/:id' => 'feiras#show'
   match '/listFeiras' => 'feiras#listFeiras'
   match '/campeonato' => 'feiras#campeonato'
+  match '/contacto' => 'feiras#contacto'
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action

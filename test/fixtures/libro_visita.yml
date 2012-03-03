@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  comentario: MyString
+  dia: 
+  hora: 
+
+two:
+  comentario: MyString
+  dia: 
+  hora: 

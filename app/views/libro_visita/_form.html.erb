@@ -1,0 +1,29 @@
+<%= form_for(@libro_visitum) do |f| %>
+  <% if @libro_visitum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@libro_visitum.errors.count, "error") %> prohibited this libro_visitum from being saved:</h2>
+
+      <ul>
+      <% @libro_visitum.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :comentario %><br />
+    <%= f.text_field :comentario %>
+  </div>
+  <div class="field">
+    <%= f.label :dia %><br />
+    <%= f.text_field :dia %>
+  </div>
+  <div class="field">
+    <%= f.label :hora %><br />
+    <%= f.text_field :hora %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

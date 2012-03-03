@@ -1,0 +1,33 @@
+<%= form_for(@anuncio) do |f| %>
+  <% if @anuncio.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@anuncio.errors.count, "error") %> prohibited this anuncio from being saved:</h2>
+
+      <ul>
+      <% @anuncio.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :titulo %>*<br />
+    <%= f.text_field :titulo %>
+  </div>
+  <div class="field">
+    <%= f.label :texto %>*<br />
+    <%= f.text_field :texto %>
+  </div>
+  <div class="field">
+    <%= f.label :numero %><br />
+    <%= f.text_field :numero %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
