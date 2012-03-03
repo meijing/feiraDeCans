@@ -9,17 +9,13 @@
   background: white;
   color: darkslategrey;
   padding: 20px;
-  border:3px solid darkslategrey;
+  border:3px solid yellowgreen;
   margin-left: 10%;
   margin-right: auto;
 }
 
 .body_content img{
     margin-left: 10%;
-}
-
-.cartelPortada{
-    
 }
 
 .corpoQuenesSomos{
@@ -40,7 +36,7 @@
 
 .menu ul li {
   float: left;
-  border:2px solid darkslategrey;
+  border-top:2px solid yellowgreen;
   background: darkslategrey;
 }
 
