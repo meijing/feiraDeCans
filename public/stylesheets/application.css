@@ -12,6 +12,7 @@
   border:3px solid yellowgreen;
   margin-left: 10%;
   margin-right: auto;
+  -moz-border-radius:15px;
 }
 
 .body_content img{
@@ -23,45 +24,57 @@
 }
 
 .menu {
-    width: 940px;
-    margin-left: 25%;
-    margin-right: auto;
+    width: 100%;
     margin-top: 7%;
+    background-color: darkcyan;
+    padding:1px;
 }
 
 .menu ul {
   list-style: none;
   padding: 0px;
+  margin-left: 25%;
 }
 
 .menu ul li {
-  float: left;
-  border-top:2px solid yellowgreen;
-  background: darkslategrey;
+    display: inline;
+    padding: 10px 5px 10px 5px;
+    -moz-border-radius:15px;
 }
 
 .menu ul li a {
-  display: block;
   padding: 5px 10px;
   text-decoration: none;
   color: yellowgreen;
   font-weight: bold;
+  font-size: 16px;
 }
 .menu ul li a:hover{
-    background: yellowgreen;
+    background: yellowgreen;    
     color:darkslategrey;
     font-weight: bold;
+    -moz-border-radius:15px;
 }
 .menu ul li a:selected{
     background: yellowgreen;
     color:darkslategrey;
     font-weight: bold;
+    -moz-border-radius:15px;
 }
 
 .menuSelected{
     background: yellowgreen;
     color:darkslategrey;
     font-weight: bold;
+}
+
+.cartelPortada img{
+    width: 350px;
+    height: 460px;
+    padding-left: auto;
+    padding-left: auto;
+    border:3px solid darkred;
+    -moz-border-radius:15px;
 }
 
 .listFeiras {
