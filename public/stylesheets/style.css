@@ -19,39 +19,6 @@ body {
 	/*background:url(../images/fentos.jpg) no-repeat;
         background-size: cover;*/
 }
-table {
-	border-collapse:separate;
-	border-spacing:0;
-}
-caption, th, td {
-	text-align:left;
-	font-weight:normal;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content:"";
-}
-blockquote, q {
-	quotes:"" "";
-}
-/* HTML5 tags */
-header, section, footer,
-aside, nav, article, figure {
-	display: block;
-}
-
-/*===================*/
-/*=== Main Styles ===*/
-/*===================*/
-
-a, a:visited {
-	color:blue;
-	text-decoration:none;
-}
-a:hover, a:active {
-	color:#000;
-	text-decoration:none;
-}
 
 #dev7link {
     position:absolute;
@@ -67,9 +34,11 @@ a:hover, a:active {
 
 .theme-default #slider {
     /*margin:50px auto 0 auto;*/    
-    width:618px; /* Make sure your images are the same size */
+    width:600px; /* Make sure your images are the same size */
     height:246px; /* Make sure your images are the same size */
-    margin-left: 20%;
+    margin: auto auto;
+    display:block;
+    top:20px;
 }
 .theme-pascal.slider-wrapper,
 .theme-orman.slider-wrapper {
@@ -80,5 +49,5 @@ a:hover, a:active {
 /*=== Other Styles ===*/
 /*====================*/
 .clear {
-	clear:both;
+    clear:both;
 }
