@@ -13,20 +13,26 @@ class FeirasController < ApplicationController
   # GET /feiras/1
   # GET /feiras/1.xml
   def show
+    require 'iconv'
+
     @feira = Feira.find(params[:id])
-    @archivos = Dir.pwd+"/public/images/"+@feira.nome
+    #@archivos = Dir.pwd+"/public/images/"
     #Dir.chdir("../.")
     #@archivos = Dir.glob("*")
-    @archivos = Dir.getwd+"/public/images/"+@feira.nome+"/"
-    @archivos = Dir.glob(@archivos+"*")
+    @archivos = Dir.getwd+"/public/images/"
+    @nomeFeira = @feira.nome.tr(' ','_')
+    @archivos = Dir.glob(@archivos+@nomeFeira+"_de_cans_*.jpg")
     @nomeImaxes = Array.new
     @contador = 0
     @archivos.each do |imaxe|
       @nomeTokens = imaxe.split("/")
-      @nomeImaxes[@contador] = @nomeTokens[@nomeTokens.length-2]+"/"+@nomeTokens[@nomeTokens.length-1]
+      @nomeImaxes[@contador] = @nomeTokens[@nomeTokens.length-1]
       @contador = @contador +1
     end
-    @feiras = Feira.all
+
+@nomeImaxes = sort_alphabetical(@nomeImaxes)
+
+   @feiras = Feira.all
     respond_to do |format|
       format.html  #show.html.erb
     end
@@ -117,4 +123,19 @@ class FeirasController < ApplicationController
       format.xml  { render :xml }
     end
   end
+
+  private
+  def sort_alphabetical(words)
+  # caching and api-wrapper
+  transliterations = {}
+
+  transliterate = lambda do |w|
+    transliterations[w] ||= Iconv.iconv('ascii//ignore//translit', 'utf-8', w).to_s
+  end
+
+  words.sort do |w1,w2|
+    transliterate.call(w1) <=> transliterate.call(w2)
+  end
+end
+
 end
