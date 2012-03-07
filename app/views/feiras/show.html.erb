@@ -1,14 +1,14 @@
 
- <div class="menu">
-    <ul>
-      <li><%= link_to 'Quenes', feiras_path%></li>
-      <li style="background:#666"><%= link_to 'Feiras', listFeiras_path%></li>
-      <li><%= link_to 'Campionato de caza de raposo', campeonato_path%></li>
-      <li><%= link_to 'Anuncios', anuncios_path%> </li>
-      <li><%= link_to 'Contacto', contacto_path%> </li>
-    </ul>
+<div class="menu">
+  <ul>
+    <li><%= link_to 'Quenes somos', feiras_path%></li>
+    <li style="background:#666"><%= link_to 'Feiras', listFeiras_path%></li>
+    <li><%= link_to 'Campionato de caza de raposo', campeonato_path%></li>
+    <li><%= link_to 'Anuncios', anuncios_path%> </li>
+    <li><%= link_to 'Contacto', contacto_path%> </li>
+  </ul>
 </div>
-<%= link_to 'Contacto', edit_feira_path%>
+
 <div class="body_content">
   <div class="cabeceiraFeiras"><%= @feira.nome%> </div>
   <div class="listFeiras">
@@ -16,39 +16,39 @@
       <% @feiras.each do |feira| %>
         <li><%= link_to feira.nome, feira %></li>
       <%  end %>
-        <li><%=link_to 'Videos', contacto_path %></li>
-      </ul>
+      <li><%=link_to 'Videos', contacto_path %></li>
+    </ul>
   </div>
-  <div id='slideshowHolder'>
+  <div id='slideshowHolder' class="fotosFeiras">
 
     <% @nomeImaxes.each do |imaxe| %>
-    
-    <%= image_tag imaxe%>
-                <%end%>
+
+      <%= image_tag imaxe%>
+    <%end%>
   </div>
-<!--
-<div id="wrapper">
+  <!--
+  <div id="wrapper">
 
-         <div class="slider-wrapper theme-default">
-            <div class="ribbon"></div>
-            <div id="slider" class="nivoSlider">
-                
-                
-            </div>
-           
-        </div>
+           <div class="slider-wrapper theme-default">
+              <div class="ribbon"></div>
+              <div id="slider" class="nivoSlider">
 
-    </div>-->
+
+              </div>
+
+          </div>
+
+      </div>-->
   <!--
     <script type="text/javascript">
     $(window).load(function() {
         $('#slider').nivoSlider();
     });
     </script>-->
-  
-<script>
-	$(document).ready( function(){
-	    $('#slideshowHolder').jqFancyTransitions({ width: 600, height: 350 });
-	});
-	</script>
+
+  <script>
+    $(document).ready( function(){
+      $('#slideshowHolder').jqFancyTransitions({ width: 600, height: 350 });
+    });
+  </script>
 </div>

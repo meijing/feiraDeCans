@@ -194,8 +194,39 @@
    height: 100px;
 }
 
-#slideshowHolder{
+.fotosFeiras{
     margin-top: 3%;
  margin-left: auto;
   margin-right: auto;
+  -moz-border-radius:10px;
+  border:9px solid lightgray;
+}
+
+.fotoSola img{
+    width: 230px;
+    height: 170px;
+    -moz-border-radius:10px;
+    border:9px solid lightgray;
+    margin-left: 50px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.textoPrincipal{
+    width: 900px;
+    margin-left: 50px;
+}
+
+
+.textoPrincipalCampeonato{
+    margin-left: 50px;
+    float:left;
+    width: 400px;
+}
+
+.fotosCampeonato{
+    margin-top: 3%;
+  -moz-border-radius:10px;
+  border:9px solid lightgray;
+  float: left;
 }

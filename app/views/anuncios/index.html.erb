@@ -1,25 +1,29 @@
 <div class="menu">
-    <ul>
-      <li><%= link_to 'Quenes somos', feiras_path%></li>
-      <li><%= link_to 'Feiras', listFeiras_path%></li>
-      <li><%= link_to 'Campionato de caza de raposo', campeonato_path%></li>
-      <li style="background:#666"><%= link_to 'Anuncios', anuncios_path%> </li>
-      <li><%= link_to 'Contacto', contacto_path%> </li>
-    </ul>
+  <ul>
+    <li><%= link_to 'Quenes somos', feiras_path%></li>
+    <li><%= link_to 'Feiras', listFeiras_path%></li>
+    <li><%= link_to 'Campionato de caza de raposo', campeonato_path%></li>
+    <li style="background:#666"><%= link_to 'Anuncios', anuncios_path%> </li>
+    <li><%= link_to 'Contacto', contacto_path%> </li>
+  </ul>
 </div>
 
 <div class="body_content">
   <div class="novoAnuncio">
     <p><span>Podes publicar o teu anuncio na nosa web, só tes que
-      enviarnos os datos e nós encargámonos de publicalo.</span></p>
+        enviarnos os datos e nós encargámonos de publicalo.</span></p>
     <p><%= link_to 'Novo anuncio', new_anuncio_path %></p>
   </div>
-<% @anuncios.each do |anuncio| %>
-  <div class="<%= anuncio.id%2 == 0 ? 'col2' : 'col1' %>">
-    <div class="tituloAnuncio"><%= link_to anuncio.titulo, anuncio%></div>
-    <div><%= anuncio.texto %></div>
-  </div>
-  
-<% end %></div>
+  <%  if !@anuncios.nil?
+    @anuncios.each do |anuncio| %>
+      <div class="<%= anuncio.id%2 == 0 ? 'col2' : 'col1' %>">
+        <div class="tituloAnuncio"><%= link_to anuncio.titulo, anuncio%></div>
+        <div><%= anuncio.texto %></div>
+      </div>
+    <%end%>
+  <%else%>
+    <div>Non existe ningún anuncio.</div>
+  <%end%>
+</div>
 
 

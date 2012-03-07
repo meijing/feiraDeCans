@@ -1,25 +1,34 @@
 
- <div class="menu">
-    <ul>
-      <li><%= link_to 'Quenes somos', feiras_path%></li>
-      <li><%= link_to 'Feiras', listFeiras_path%></li>
-      <li style="background:#666"><%= link_to 'Campionato de caza de raposo', listFeiras_path%></li>
-      <li><%= link_to 'Anuncios', anuncios_path%> </li>
-      <li><%= link_to 'Contacto', contacto_path%> </li>
-    </ul>
+<div class="menu">
+  <ul>
+    <li><%= link_to 'Quenes somos', feiras_path%></li>
+    <li><%= link_to 'Feiras', listFeiras_path%></li>
+    <li style="background:#666"><%= link_to 'Campionato de caza de raposo', listFeiras_path%></li>
+    <li><%= link_to 'Anuncios', anuncios_path%> </li>
+    <li><%= link_to 'Contacto', contacto_path%> </li>
+  </ul>
 </div>
 
 <div class="body_content">
- 
-  <div class="cabeceiraFeiras">Campeonato provincial de caza de raposo</div>
-  <div id='slideshowHolder'>
-    <%= image_tag "foto1.jpg"%>
-    <%= image_tag "foto2.jpg"%>
 
-	</div>
-<script>
-	$(document).ready( function(){
-	    $('#slideshowHolder').jqFancyTransitions({ width: 400, height: 300 });
-	});
-	</script>
+  <div class="cabeceiraFeiras">Campeonato provincial de caza de raposo</div>
+  <div class="textoPrincipalCampeonato">
+        <p>aklsdfjeklwafjñlkfjaweifjawñlekfjaewfjaioewfjekfjadskl</p>
+        <p>asldkfjewifajweklfjasñlkdcfaksdfjsdfjaksd</p>
+        <p>asldkfjewifajweklfjasñlkdcfaksdfjsdfjaksd</p>
+        <p>asldkfjewifajweklfjasñlkdcfaksdfjsdfjaksd</p>
+        <p>asldkfjewifajweklfjasñlkdcfaksdfjsdfjaksd</p>
+      </div>
+  <div id='slideshowHolder' class="fotosCampeonato">
+    <% @nomeImaxes.each do |imaxe| %>
+      <%= image_tag imaxe%>
+    <%end%>
+  </div>
+
+
+  <script>
+    $(document).ready( function(){
+      $('#slideshowHolder').jqFancyTransitions({ width: 400, height: 300 });
+    });
+  </script>
 </div>

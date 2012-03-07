@@ -30,9 +30,9 @@ class FeirasController < ApplicationController
       @contador = @contador +1
     end
 
-@nomeImaxes = sort_alphabetical(@nomeImaxes)
+    @nomeImaxes = sort_alphabetical(@nomeImaxes)
 
-   @feiras = Feira.all
+    @feiras = Feira.all
     respond_to do |format|
       format.html  #show.html.erb
     end
@@ -109,10 +109,19 @@ class FeirasController < ApplicationController
 
   def campeonato
     @feiras = Feira.all
+    @archivos = Dir.getwd+"/public/images/"
+    @archivos = Dir.glob(@archivos+"Campeonato_provincial_de_raposo_*.jpg")
+    @nomeImaxes = Array.new
+    @contador = 0
+    @archivos.each do |imaxe|
+      @nomeTokens = imaxe.split("/")
+      @nomeImaxes[@contador] = @nomeTokens[@nomeTokens.length-1]
+      @contador = @contador +1
+    end
 
+    @nomeImaxes = sort_alphabetical(@nomeImaxes)
     respond_to do |format|
       format.html # campeonato.html.erb
-      format.xml  { render :xml => @feiras }
     end
   end
 
@@ -126,16 +135,16 @@ class FeirasController < ApplicationController
 
   private
   def sort_alphabetical(words)
-  # caching and api-wrapper
-  transliterations = {}
+    # caching and api-wrapper
+    transliterations = {}
 
-  transliterate = lambda do |w|
-    transliterations[w] ||= Iconv.iconv('ascii//ignore//translit', 'utf-8', w).to_s
-  end
+    transliterate = lambda do |w|
+      transliterations[w] ||= Iconv.iconv('ascii//ignore//translit', 'utf-8', w).to_s
+    end
 
-  words.sort do |w1,w2|
-    transliterate.call(w1) <=> transliterate.call(w2)
+    words.sort do |w1,w2|
+      transliterate.call(w1) <=> transliterate.call(w2)
+    end
   end
-end
 
 end
