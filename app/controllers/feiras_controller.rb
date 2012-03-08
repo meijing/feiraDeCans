@@ -30,8 +30,6 @@ class FeirasController < ApplicationController
       @contador = @contador +1
     end
 
-    @nomeImaxes = sort_alphabetical(@nomeImaxes)
-
     @feiras = Feira.all
     respond_to do |format|
       format.html  #show.html.erb
@@ -119,7 +117,6 @@ class FeirasController < ApplicationController
       @contador = @contador +1
     end
 
-    @nomeImaxes = sort_alphabetical(@nomeImaxes)
     respond_to do |format|
       format.html # campeonato.html.erb
     end
@@ -132,19 +129,4 @@ class FeirasController < ApplicationController
       format.xml  { render :xml }
     end
   end
-
-  private
-  def sort_alphabetical(words)
-    # caching and api-wrapper
-    transliterations = {}
-
-    transliterate = lambda do |w|
-      transliterations[w] ||= Iconv.iconv('ascii//ignore//translit', 'utf-8', w).to_s
-    end
-
-    words.sort do |w1,w2|
-      transliterate.call(w1) <=> transliterate.call(w2)
-    end
-  end
-
 end
