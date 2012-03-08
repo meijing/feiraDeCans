@@ -2,6 +2,17 @@
   Override default refinery application CSS below.
   Formatting applies to all frontend.
 */
+.encabezado{
+    width: 900px;
+    height: 100px;
+    margin-left: auto;
+  margin-right: auto;
+}
+
+.encabezado img{
+    width: 900px;
+    height: 140px;
+}
 
 .body_content{
   width: 940px;
@@ -13,6 +24,7 @@
   margin-right: auto;
   -moz-border-radius:15px;
   height: 500px;
+  background-image: '/images/logoDifuminado.png';
 }
 
 .body_content img{
@@ -25,7 +37,6 @@
 
 .menu {
     width: 100%;
-    margin-top: 7%;
     background-color: darkcyan;
     padding:1px;
     -moz-border-radius:55px;
