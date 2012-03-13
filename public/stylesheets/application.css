@@ -257,6 +257,11 @@
     float: left;
 }
 
+.fotosCampeonato img{
+    width: 400px;
+    height: 350px;
+}
+
 .textoPrincipalCampeonato p{
     font-size: 15px;
 }
