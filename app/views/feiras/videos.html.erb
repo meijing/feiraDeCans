@@ -1,0 +1,27 @@
+<div class="encabezado"><%=image_tag 'encabezado.png'%></div>
+<div class="menu">
+  <ul>
+    <li><%= link_to 'Quenes somos', feiras_path%></li>
+    <li><%= link_to 'Feiras', listFeiras_path%></li>
+    <li><%= link_to 'Campionato de caza de raposo', campeonato_path%></li>
+    <li><%= link_to 'Anuncios', anuncios_path%> </li>
+    <li><%= link_to 'Contacto', contacto_path%> </li>
+  </ul>
+</div>
+
+<div class="body_content">
+  <div class="videoIzquierda">
+    <object class="videoIz" width="425" height="350">
+      <param name="movie" value="http://youtu.be/JS-2QuipgPk"></param>
+      <param name="wmode" value="transparent"></param>
+      <iframe width="420" height="315" src="http://www.youtube.com/embed/JS-2QuipgPk" frameborder="0" allowfullscreen></iframe>
+    </object>
+  </div>
+  <div class="videoDereita">
+    <object class="videoDe" width="425" height="350">
+      <param name="movie" value="http://www.youtube.com/embed/9z-EjGtJjwE"></param>
+      <param name="wmode" value="transparent"></param>
+      <iframe width="420" height="315" src="http://www.youtube.com/embed/9z-EjGtJjwE" frameborder="0" allowfullscreen></iframe>
+    </object>
+  </div>
+</div>

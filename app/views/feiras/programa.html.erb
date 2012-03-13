@@ -1,0 +1,71 @@
+<div class="encabezado"><%=image_tag 'encabezado.png'%></div>
+<div class="menu">
+    <ul>
+      <li><%= link_to 'Quenes somos', feiras_path%></li>
+      <li><%= link_to 'Feiras', listFeiras_path%></li>
+      <li><%= link_to 'Campionato de caza de raposo', campeonato_path%></li>
+      <li><%= link_to 'Anuncios', anuncios_path%> </li>
+      <li><%= link_to 'Contacto', contacto_path%> </li>
+    </ul>
+</div>
+
+<div class="body_content">
+
+  <div class="listFeiras">
+    <ul>
+      <% @feiras.each do |feira| %>
+        <li><%= link_to feira.nome, feira %></li>
+      <%  end %>
+        <li><%=link_to 'Videos', contacto_path %></li>
+      </ul>
+  </div>
+
+  <div id="cartel" class="cartelPortada">
+    <div class="encabezadoPrograma">PROGRAMA FEIRA DE CANS DE CAZA</div>
+    <div id="partePrograma" class="programaIzquierda">
+      <p><span>SABADO 5: CAMPEONATO PERCORRIDOS DE CAZA 1º Trofeo Concello de Vila de Cruces</p>
+      <p><span>Serie 25 Platos. </span>INSCRIPCIÓN 20 euros platos incluidos. 
+      <span>Servicio de bar e cartuchería</span></p>
+      <p><span>DOMINGO 6:</span></p>
+      <p>Dende as 8 da mañá entrada de cans no recinto feiral.</p>
+      <p>Ás 10 da mañá: apertura oficial da VI Feira de cans de caza por Xesús Otero Varela,
+      alcalde de Vila de Cruces.</p>
+      <p>13 horas: Entrega de Premios:</p>
+      <p>MELLOR CAN DA FEIRA trofeo..... 1 xamón e 5 s/pienso A.E.
+      MELLOR XAULA (Xurado popular).. 1 xamón e 2 sacos pienso
+      MELLOR CAMADA ................. 1 xamón e 2 s/pienso cachorros
+      MELLOR CAND DE RAZA, trofeo e 1 saco de pienso <br/>
+      <span class="letraPequena">(Cada can exposto non poderá obtar a máis de un premio, a decisión dos xuices
+      será inapelable e poderán dar como desierto calquer premio se o consideran oportuno)
+        </span></p>
+        <p><span>EXPOSICIÓN CAZA, CONEXOS E PERDICES</span> (procedentes do criadeiro da sociedade de
+      caza de Vila de Cruces e da Granxa de Mouriscade da Diputación Provincial)</p>
+      <p><span>EXPOSICIÓN DE CETRERÍA</span>, no recinto feiral, a cargo de Falcóns Galicia.</p>
+      <p>Sorteo de un Xamón cada hora, (11, 12, 13 e 14 horas), no caso de que non aparecese
+      un boleto premiado volverá a sortearse as 14 horas)</p>
+    </div>
+
+    <div id="partePrograma" class="programaIzquierda">
+      <p>Sorteo de 100 euros, entre os participantes do xurado popular, na elección da
+      mellor xaula (os que desexen participar de xurado, retirarán na entrada, unha ficha
+      que donde poderán votar).</p>
+      <p>Os expositores de cans, serán obsequiados con un vale por unha ración de pulpo,
+      pan e unha taza de viño de 10 a 12 da mañá (mínimo 6 cans por xaula), reservando antes
+      do 30 de abril.</p>
+      <p>A partires das 16,30 horas, no parque da Residencia <span>EXHIBICIÓN DE CETRERÍA</span>, a cargo
+      de <span>Falcóns Galicia</span>.</p>
+      <p><span>EXHIBICIÓN DE CAZA CON ARCO</span></p>
+      <p><span>DEGUSTACIÓN GRATUITA DE XABARÍN</span>, no Bar da Comisión Piedade 2012 (Xabaríns doados
+      polas cuadrillas de caza maior da sociedade de caza de Vila de Cruces).</p>
+      <p><span>RESERVA DE XAULAS: 600 801 800 - 645 932 687</span></p>
+      <p><span>CONDICIÓNS PARA A ENTRADA DE CANS AO RECINTO FEIRAL</span></p>
+      <p>* Os propeitarios dos cans firmarán unha entrada na feira co número de cans, sendo
+      os únicos responsables da súa identificación, eximindo de toda responsabilidade
+      tanto a veterinaria da feira coma a organización.</p>
+      <p>* Todos os cans que non cumplan as condicións hixiénico-sanitarias, será rexeitada
+      a entrada ó recinto feiral.</p>
+      <p>* Todos os cachorros menores de 2 meses, non poderán acceder ó recinto.</p>
+    </div>
+  </div>
+
+</div>

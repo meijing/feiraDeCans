@@ -2,7 +2,7 @@
 <div class="menu">
     <ul>
       <li><%= link_to 'Quenes somos', feiras_path%></li>
-      <li style="background:#666"><%= link_to 'Feiras', listFeiras_path%></li>
+      <li><%= link_to 'Feiras', listFeiras_path%></li>
       <li><%= link_to 'Campionato de caza de raposo', campeonato_path%></li>
       <li><%= link_to 'Anuncios', anuncios_path%> </li>
       <li><%= link_to 'Contacto', contacto_path%> </li>
@@ -16,12 +16,13 @@
       <% @feiras.each do |feira| %>
         <li><%= link_to feira.nome, feira %></li>
       <%  end %>
-        <li><%=link_to 'Videos', contacto_path %></li>
+        <li><%=link_to 'Videos', videos_path %></li>
       </ul>
   </div>
 
   <div id="cartel" class="cartelPortada">
     <%= image_tag 'cartel_vi.jpg' %>
   </div>
+  <div class="programa"><%= link_to 'Ver programa', programa_path%></div>
 
 </div>

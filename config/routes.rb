@@ -13,6 +13,8 @@ Proba::Application.routes.draw do
   match '/listFeiras' => 'feiras#listFeiras'
   match '/campeonato' => 'feiras#campeonato'
   match '/contacto' => 'feiras#contacto'
+  match '/programa' => 'feiras#programa'
+  match '/videos' => 'feiras#videos'
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action

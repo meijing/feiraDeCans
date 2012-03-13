@@ -30,6 +30,7 @@ class FeirasController < ApplicationController
       @contador = @contador +1
     end
 
+    @nomeImaxes = @nomeImaxes.sort()
     @feiras = Feira.all
     respond_to do |format|
       format.html  #show.html.erb
@@ -117,6 +118,7 @@ class FeirasController < ApplicationController
       @contador = @contador +1
     end
 
+    @nomeImaxes = @nomeImaxes.sort()
     respond_to do |format|
       format.html # campeonato.html.erb
     end
@@ -127,6 +129,20 @@ class FeirasController < ApplicationController
     respond_to do |format|
       format.html # contacto.html.erb
       format.xml  { render :xml }
+    end
+  end
+
+  def programa
+    @feiras = Feira.all
+    respond_to do |format|
+      format.html # programa.html.erb
+    end
+  end
+
+  def videos
+    @feiras = Feira.all
+    respond_to do |format|
+      format.html # videos.html.erb
     end
   end
 end

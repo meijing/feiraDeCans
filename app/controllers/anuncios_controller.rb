@@ -6,7 +6,6 @@ class AnunciosController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.xml  { render :xml => @anuncios }
     end
   end
 
@@ -25,7 +24,7 @@ class AnunciosController < ApplicationController
   # GET /anuncios/new.xml
   def new
     @anuncio = Anuncio.new
-
+    AnuncioMailer.enviar_anuncio().deliver
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @anuncio }

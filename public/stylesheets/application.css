@@ -6,7 +6,7 @@
     width: 900px;
     height: 100px;
     margin-left: auto;
-  margin-right: auto;
+    margin-right: auto;
 }
 
 .encabezado img{
@@ -15,16 +15,15 @@
 }
 
 .body_content{
-  width: 940px;
-  background: white;
-  color: darkslategrey;
-  padding: 20px;
-  border:9px solid yellowgreen;
-  margin-left: auto;
-  margin-right: auto;
-  -moz-border-radius:15px;
-  height: 500px;
-  background-image: '/images/logoDifuminado.png';
+    width: 940px;
+    color: darkslategrey;
+    padding: 20px;
+    border:9px solid yellowgreen;
+    margin-left: auto;
+    margin-right: auto;
+    -moz-border-radius:15px;
+    height: 550px;
+    background-color: white;
 }
 
 .body_content img{
@@ -43,9 +42,9 @@
 }
 
 .menu ul {
-  list-style: none;
-  padding: 0px;
-  margin-left: 25%;
+    list-style: none;
+    padding: 0px;
+    margin-left: 25%;
 }
 
 .menu ul li {
@@ -55,11 +54,11 @@
 }
 
 .menu ul li a {
-  padding: 5px 10px;
-  text-decoration: none;
-  color: yellowgreen;
-  font-weight: bold;
-  font-size: 14px;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: yellowgreen;
+    font-weight: bold;
+    font-size: 14px;
 }
 .menu ul li a:hover{
     background: yellowgreen;    
@@ -84,42 +83,44 @@
     display: block;
     width: 350px;
     height: 460px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 230px;
     border:3px solid darkred;
     -moz-border-radius:15px;
+    float: left;
+    margin-top: 55px;
 }
 
 .listFeiras {
-  width: 10%;
-  float:left;
-  margin-left: 2%;
-  border-right:3px solid darkslategrey;
-  cursor:hand;
+    width: 10%;
+    float:left;
+    margin-left: 2%;
+    border-right:3px solid darkslategrey;
+    margin-top: 60px;
 }
 
 .listFeiras ul {
-  list-style: none;
-  padding: 0px;
+    list-style: none;
+    padding: 0px;
+    text-align: center;
 }
 
 .listFeiras ul li {
-  margin-right: 8px;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  text-decoration: none;
+    margin-right: 8px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-decoration: none;
 }
 
 .listFeiras ul li a{
-     color:darkslategrey;
-     font-size: 18px;
-     font-weight: bold;
-     text-decoration: none;
+    color:darkslategrey;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
 }
 
 .listFeiras ul li a:hover{
-     color:yellowgreen;
-     background: darkslategrey;
+    color:yellowgreen;
+    background: darkslategrey;
     font-weight: bold;
     -moz-border-radius:5px;
     padding:4px;
@@ -142,10 +143,11 @@
 }
 
 .novoAnuncio a{
-  padding: 5px 10px;
-  color: yellowgreen;
-  font-weight: bold;
-  background-color: darkslategrey;
+    padding: 5px 20px;
+    color: yellowgreen;
+    font-weight: bold;
+    background-color: darkslategrey;
+    text-decoration: none;
 }
 
 .novoAnuncio a:hover{
@@ -154,8 +156,8 @@
 }
 
 .novoAnuncio a:visited{
-  color: yellowgreen;
-  background-color: darkslategrey;
+    color: yellowgreen;
+    background-color: darkslategrey;
 }
 
 .novoAnuncio img{
@@ -170,47 +172,51 @@
 }
 
 .tituloAnuncio a{
-  display: block;
-  padding: 5px 10px;
-  text-decoration: none;
-  font-weight: bold;
-  color: darkslategrey;
+    display: block;
+    padding: 5px 10px;
+    text-decoration: none;
+    font-weight: bold;
+    color: darkslategrey;
 }
 
 .tituloAnuncio a:hover{
-  display: block;
-  padding: 5px 10px;
-  text-decoration: none;
-  font-weight: bold;
-  background-color: yellowgreen;
+    display: block;
+    padding: 5px 10px;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: yellowgreen;
 }
 
 .col1{
-   position: relative;
-   overflow: hidden;
-   float: left;
-   width: 350px;
-   background-color: #e6e6e6;
-   margin-top: 5px;
-   height: 100px;
+    position: relative;
+    overflow: hidden;
+    float: left;
+    width: 350px;
+    background-color: #e6e6e6;
+    margin-top: 5px;
+    height: 100px;
 }
 .col2{
-   position: relative;
-   overflow: hidden;
-   float: left;
-   width: 350px;
-   left: 3%;
-   background-color: #e6e6e6;
-   margin-top: 5px;
-   height: 100px;
+    position: relative;
+    overflow: hidden;
+    float: left;
+    width: 350px;
+    left: 3%;
+    background-color: #e6e6e6;
+    margin-top: 5px;
+    height: 100px;
 }
 
 .fotosFeiras{
-    margin-top: 3%;
- margin-left: auto;
-  margin-right: auto;
-  -moz-border-radius:10px;
-  border:9px solid lightgray;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    -moz-border-radius:10px;
+    border:9px solid lightgray;
+}
+.fotosFeiras img{
+    width: 600px;
+    height: 350px;
 }
 
 .fotoSola img{
@@ -224,8 +230,14 @@
 }
 
 .textoPrincipal{
-    width: 900px;
+    width: 840px;
     margin-left: 50px;
+    float: left;
+    text-align: justify;
+    margin-right: 50px;
+}
+.textoPrincipal p{
+    font-size: 15px;
 }
 
 
@@ -233,11 +245,118 @@
     margin-left: 50px;
     float:left;
     width: 400px;
+    text-align: justify;
+    padding-right: 20px;
+    padding-top: 150px;
 }
 
 .fotosCampeonato{
-    margin-top: 3%;
-  -moz-border-radius:10px;
-  border:9px solid lightgray;
-  float: left;
+    margin-top: 100px;
+    -moz-border-radius:10px;
+    border:9px solid lightgray;
+    float: left;
+}
+
+.logo{
+    /*loat:left;*/
+}
+
+.formulario{
+    -moz-border-radius:10px;
+    border:2px solid lightgray;
+    width: 500px;
+    height: 350px;
+    margin-left: 400px;
+}
+
+.infoAsociacion{
+    margin-left: 90px;
+}
+
+.programa a{
+    margin-left: 50px;
+    padding: 5px 20px;
+    color: yellowgreen;
+    font-weight: bold;
+    background-color: darkslategrey;
+    text-decoration: none;
+    color: yellowgreen;
+}
+
+.programa a:hover{
+    background-color: yellowgreen;
+    color: darkslategrey;
+}
+
+.programa a:visited{
+    color: yellowgreen;
+    background-color: darkslategrey;
+}
+
+.encabezadoPrograma{
+    width: 700px;
+    background-color: darkslategrey;
+    font-size: 28px;
+    font-weight: bold;
+    color:yellowgreen;
+    margin-left: 170px;
+    text-align: center;
+}
+
+#partePrograma{
+    -moz-border-radius:10px;
+    border:2px solid lightgray;
+}
+#partePrograma p span{
+    font-weight: bold;
+}
+
+#partePrograma p{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.programaIzquierda{
+    float: left;
+    width: 390px;
+    padding: 5px;
+    margin-left: 8px;
+    margin-top: 7px;
+    text-align: justify;
+    height: 500px;
+}
+
+.letraPequena{
+    font-size: 10px;
+}
+
+.cabeceiraFotosFeiras{
+    margin-top: 80px;
+    margin-left: 200px;
+}
+
+.videoIzquierda{
+    float: left;
+    width: 430px;
+    height: 550px;
+    margin-left: 30px;
+     -moz-border-radius:10px;
+    border:2px solid lightgray;
+}
+
+.videoDereita{
+    float: left;
+    width: 430px;
+    height: 550px;
+    margin-left: 30px;
+     -moz-border-radius:10px;
+    border:2px solid lightgray;
+}
+
+.videoIz{
+    margin-top: 200px;
+}
+
+videoDe{
+
 }
