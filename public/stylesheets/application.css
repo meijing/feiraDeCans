@@ -17,7 +17,6 @@
 .body_content{
     width: 940px;
     color: darkslategrey;
-    padding: 20px;
     border:9px solid yellowgreen;
     margin-left: auto;
     margin-right: auto;
@@ -31,7 +30,7 @@
 }
 
 .corpoQuenesSomos{
-    margin-top: 4%;
+    margin-top: 1%;
 }
 
 .menu {
@@ -237,7 +236,7 @@
     margin-right: 50px;
 }
 .textoPrincipal p{
-    font-size: 15px;
+    font-size: 14px;
 }
 
 
@@ -263,7 +262,7 @@
 }
 
 .textoPrincipalCampeonato p{
-    font-size: 15px;
+    font-size: 14px;
 }
 
 .logo{
@@ -323,6 +322,7 @@
 #partePrograma p{
     margin-top: 5px;
     margin-bottom: 5px;
+    font-size: 12px;
 }
 
 .programaIzquierda{
@@ -332,7 +332,7 @@
     margin-left: 8px;
     margin-top: 7px;
     text-align: justify;
-    height: 500px;
+    height: 483px;
 }
 
 .letraPequena{
@@ -342,7 +342,7 @@
 .cabeceiraFotosFeiras{
     margin-top: 80px;
     margin-left: 160px;
-    font-size: 15px;
+    font-size: 14px;
 }
 
 .videoIzquierda{
@@ -369,9 +369,21 @@
 }
 
 .iz p{
-    font-size: 15px;
+    font-size: 14px;
 }
 
 .de p{
-    font-size: 15px;
+    font-size: 14px;
+}
+
+.pe{
+    margin-top: 10px;
+    padding: 5px;
+    width: 940px;
+    height: 40px;
+    border:3px solid yellowgreen;
+    margin-left: auto;
+    margin-right: auto;
+    -moz-border-radius:15px;
+    background-color: white;
 }
