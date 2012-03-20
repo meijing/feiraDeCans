@@ -1,14 +1,4 @@
 
-<div class="menu">
-  <ul>
-    <li><%= link_to 'Quenes somos', feiras_path%></li>
-    <li><%= link_to 'Feiras', listFeiras_path%></li>
-    <li><%= link_to 'Campionato de caza de raposo', campeonato_path%></li>
-    <li><%= link_to 'Anuncios', anuncios_path%> </li>
-    <li><%= link_to 'Contacto', contacto_path%> </li>
-  </ul>
-</div>
-
 <div class="body_content">
 
   <div class="listFeiras">
@@ -20,8 +10,8 @@
     </ul>
   </div>
   <div>
-    <p class="cabeceiraFotosFeiras">A continuación mostraranse automáticamente as fotos da
-    <%= @feira.nome %>.</p>
+    <p class="posicionCabeceiraFeiras"><h2 class="cabeceiraFotosFeiras"><%= @feira.nome %></h2>.
+    As fotos mostraranse automaticamente.</p>
     <div id='slideshowHolder' class="fotosFeiras">
 
       <% @nomeImaxes.each do |imaxe| %>

@@ -1,4 +1,6 @@
 Proba::Application.routes.draw do
+  resources :contactos
+
   resources :visits
 
   resources :anuncios

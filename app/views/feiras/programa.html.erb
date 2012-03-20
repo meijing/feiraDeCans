@@ -1,14 +1,4 @@
 
-<div class="menu">
-    <ul>
-      <li><%= link_to 'Quenes somos', feiras_path%></li>
-      <li><%= link_to 'Feiras', listFeiras_path%></li>
-      <li><%= link_to 'Campionato de caza de raposo', campeonato_path%></li>
-      <li><%= link_to 'Anuncios', anuncios_path%> </li>
-      <li><%= link_to 'Contacto', contacto_path%> </li>
-    </ul>
-</div>
-
 <div class="body_content">
 
   <div class="listFeiras">
@@ -16,12 +6,12 @@
       <% @feiras.each do |feira| %>
         <li><%= link_to feira.nome, feira %></li>
       <%  end %>
-        <li><%=link_to 'Videos', contacto_path %></li>
+        <li><%=link_to 'Videos', videos_path %></li>
       </ul>
   </div>
 
   <div id="cartel" class="cartelPortada">
-    <div class="encabezadoPrograma">PROGRAMA FEIRA DE CANS DE CAZA</div>
+    <div><h1 class="encabezadoPrograma">PROGRAMA VI FEIRA DE CANS DE CAZA</h1></div>
     <div id="partePrograma" class="programaIzquierda">
       <p><span>SABADO 5: CAMPEONATO PERCORRIDOS DE CAZA 1º Trofeo Concello de Vila de Cruces</p>
       <p><span>Serie 25 Platos. </span>INSCRIPCIÓN 20 euros platos incluidos. 

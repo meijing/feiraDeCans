@@ -138,7 +138,8 @@
     background-color: lightgray;
     float: right;
     margin: 0 auto 0 auto;
-    padding-left: 30px;
+    padding: 15px;
+    text-align: justify;
 }
 
 .novoAnuncio a{
@@ -266,15 +267,17 @@
 }
 
 .logo{
-    /*loat:left;*/
+    float:left;
+    margin-top: 60px;
 }
 
 .formulario{
     -moz-border-radius:10px;
-    border:2px solid lightgray;
+    /*border:2px solid lightgray;*/
     width: 500px;
     height: 350px;
     margin-left: 400px;
+    margin-top: 80px;
 }
 
 .infoAsociacion{
@@ -307,8 +310,10 @@
     font-size: 28px;
     font-weight: bold;
     color:yellowgreen;
-    margin-left: 170px;
+    margin-left: 90px;
     text-align: center;
+    display: inline;
+    padding: 5px 20px;
 }
 
 #partePrograma{
@@ -340,9 +345,11 @@
 }
 
 .cabeceiraFotosFeiras{
+    margin-left: 240px;
+}
+
+.posicionCabeceiraFeiras{
     margin-top: 80px;
-    margin-left: 160px;
-    font-size: 14px;
 }
 
 .videoIzquierda{
@@ -386,4 +393,20 @@
     margin-right: auto;
     -moz-border-radius:15px;
     background-color: white;
+}
+.pe p{
+     margin-left: 300px;
+}
+
+h1{
+    font-size: 16px;
+}
+
+h2{
+    font-size: 20px;
+    display: inline;
+}
+
+.tituloCampeonato{
+    font-size: 16px;
 }

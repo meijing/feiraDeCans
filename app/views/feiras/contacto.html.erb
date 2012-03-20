@@ -1,21 +1,25 @@
 
- <div class="menu">
-    <ul>
-      <li><%= link_to 'Quenes somos', feiras_path%></li>
-      <li><%= link_to 'Feiras', listFeiras_path%></li>
-      <li><%= link_to 'Campionato de caza de raposo', listFeiras_path%></li>
-      <li><%= link_to 'Anuncios', anuncios_path%> </li>
-      <li><%= link_to 'Contacto', contacto_path%> </li>
-    </ul>
-</div>
-
 <div class="body_content">
   <div class="logo">
     <%= image_tag 'logo.png' %>
   </div>
-  <!--<div class="formulario">
-    <div>formulario</div>
-  </div>-->
+  <div class="formulario">
+    <div class="field">
+    <%= f.label 'Nombre' %><br />
+    <%= f.text_field '' %>
+  </div>
+  <div class="field">
+    <%= f.label 'Email'%><br />
+    <%= f.text_field :texto %>
+  </div>
+  <div class="field">
+    <%= f.label 'Texto' %><br />
+    <%= f.text_field :numero %>
+  </div>
+  <div class="actions">
+    <%= f.submit 'Crear anuncio'%>
+  </div>
+  </div>
    <div class="infoAsociacion">
     <p>Sociedade de Caza de Vila de Cruces</p>
     <p>Tfno: 600 801 800 - 645 932 687</p>

@@ -1,1 +1,10 @@
 <div class="encabezado"><%=image_tag 'encabezado.png'%></div>
+<div class="menu">
+  <ul>
+    <li><%= link_to 'Quenes somos', feiras_path%></li>
+    <li><%= link_to 'Feiras', listFeiras_path%></li>
+    <li><%= link_to 'Campionato de caza de raposo', campeonato_path%></li>
+    <li><%= link_to 'Anuncios', anuncios_path%> </li>
+    <li><%= link_to 'Contacto', contactos_path%> </li>
+  </ul>
+</div>
