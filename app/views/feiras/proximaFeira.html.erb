@@ -1,0 +1,18 @@
+
+<div class="body_content">
+  
+  <div class="listFeiras">
+    <ul>
+      <% @feiras.each do |feira| %>
+        <li><%= link_to feira.nome, feira %></li>
+      <%  end %>
+        <li><%=link_to 'Videos', videos_path %></li>
+      </ul>
+  </div>
+
+  <div id="cartel" class="cartelPortada">
+    <%= image_tag 'cartel_vi.jpg' %>
+  </div>
+  <div class="programa"><%= link_to 'Ver programa', programa_path%></div>
+
+</div>

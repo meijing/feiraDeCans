@@ -5,7 +5,7 @@ class FeirasController < ApplicationController
     @feiras = Feira.all
 
     respond_to do |format|
-      format.html # listFeiras.html.erb
+      format.html # proximaFeira.html.erb
       format.xml  { render :xml => @feiras }
     end
   end
@@ -97,11 +97,11 @@ class FeirasController < ApplicationController
     end
   end
 
-  def listFeiras
+  def proximaFeira
     @feiras = Feira.all
 
     respond_to do |format|
-      format.html # listFeiras.html.erb
+      format.html # proximaFeira.html.erb
       format.xml  { render :xml => @feiras }
     end
   end
