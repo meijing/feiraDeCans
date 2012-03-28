@@ -14,8 +14,9 @@ class FeirasController < ApplicationController
   # GET /feiras/1.xml
   def show
     require 'iconv'
-
-    @feira = Feira.find(params[:id])
+    @idFeira = Feira.find_by_nome(params[:id])
+    #@feira = Feira.find(params[:id])
+    @feira = Feira.find_by_nome(params[:id])
     #@archivos = Dir.pwd+"/public/images/"
     #Dir.chdir("../.")
     #@archivos = Dir.glob("*")
