@@ -23,8 +23,9 @@ class AnunciosController < ApplicationController
   # GET /anuncios/new
   # GET /anuncios/new.xml
   def new
+    
     @anuncio = Anuncio.new
-    AnuncioMailer.enviar_anuncio().deliver
+    
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @anuncio }
