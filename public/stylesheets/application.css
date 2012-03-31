@@ -90,11 +90,11 @@
 }
 
 .listFeiras {
-    width: 10%;
+    width: 100px;
     float:left;
-    margin-left: 2%;
+    margin-left: 1%;
     border-right:3px solid darkslategrey;
-    margin-top: 60px;
+    margin-top: 5px;
 }
 
 .listFeiras ul {
@@ -105,7 +105,7 @@
 
 .listFeiras ul li {
     margin-right: 8px;
-    margin-top: 50px;
+    margin-top: 30px;
     margin-bottom: 50px;
     text-decoration: none;
 }
@@ -284,6 +284,10 @@
     margin-left: 90px;
 }
 
+.programa{
+    margin-top: 60px;
+}
+
 .programa a{
     margin-left: 50px;
     padding: 5px 20px;
@@ -349,7 +353,7 @@
 }
 
 .posicionCabeceiraFeiras{
-    margin-top: 80px;
+    margin-top: 60px;
 }
 
 .videoIzquierda{
@@ -409,4 +413,10 @@ h2{
 
 .tituloCampeonato{
     font-size: 16px;
+}
+
+.tituloFeira{
+    font-size: 20px;
+    display: inline;
+    margin-left: 270px;
 }

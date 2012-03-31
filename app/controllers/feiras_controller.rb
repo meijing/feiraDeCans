@@ -125,6 +125,24 @@ class FeirasController < ApplicationController
     end
   end
 
+   def campionato_tiro_con_arco
+    @feiras = Feira.all
+    @archivos = Dir.getwd+"/public/images/"
+    @archivos = Dir.glob(@archivos+"tiro_con_arco_*.jpg")
+    @nomeImaxes = Array.new
+    @contador = 0
+    @archivos.each do |imaxe|
+      @nomeTokens = imaxe.split("/")
+      @nomeImaxes[@contador] = @nomeTokens[@nomeTokens.length-1]
+      @contador = @contador +1
+    end
+
+    @nomeImaxes = @nomeImaxes.sort()
+    respond_to do |format|
+      format.html # campeonato.html.erb
+    end
+  end
+
   def contacto
 
     respond_to do |format|
@@ -141,7 +159,6 @@ class FeirasController < ApplicationController
   end
 
   def videos
-    @feiras = Feira.all
     respond_to do |format|
       format.html # videos.html.erb
     end
