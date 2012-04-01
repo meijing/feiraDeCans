@@ -40,16 +40,18 @@ class AnunciosController < ApplicationController
   # POST /anuncios
   # POST /anuncios.xml
   def create
+    p('------------------')
     @anuncio = Anuncio.new(params[:anuncio])
 
     respond_to do |format|
-      if @anuncio.save
+      #if @anuncio.save
+        AnuncioMailer.enviar_anuncio().deliver
         format.html { redirect_to(anuncios_path, :notice => 'O anuncio foi enviado o noso correo. En breve revisaremolo e publicaremolo na web.') }
         format.xml  { render :xml => @anuncio, :status => :created, :location => @anuncio }
-      else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @anuncio.errors, :status => :unprocessable_entity }
-      end
+      #else
+       # format.html { render :action => "new" }
+       # format.xml  { render :xml => @anuncio.errors, :status => :unprocessable_entity }
+      #end
     end
   end
 
