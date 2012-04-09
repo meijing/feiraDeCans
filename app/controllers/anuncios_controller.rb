@@ -2,8 +2,8 @@ class AnunciosController < ApplicationController
   # GET /anuncios
   # GET /anuncios.xml
   def index
-    @anuncios = Anuncio.all
-
+@anuncios = Anuncio.paginate(:page => params[:page], :per_page => 10 )
+ 
     respond_to do |format|
       format.html # index.html.erb
     end
@@ -44,14 +44,14 @@ class AnunciosController < ApplicationController
     @anuncio = Anuncio.new(params[:anuncio])
 
     respond_to do |format|
-      #if @anuncio.save
+      if @anuncio.save
         AnuncioMailer.enviar_anuncio().deliver
         format.html { redirect_to(anuncios_path, :notice => 'O anuncio foi enviado o noso correo. En breve revisaremolo e publicaremolo na web.') }
         format.xml  { render :xml => @anuncio, :status => :created, :location => @anuncio }
-      #else
-       # format.html { render :action => "new" }
-       # format.xml  { render :xml => @anuncio.errors, :status => :unprocessable_entity }
-      #end
+      else
+        format.html { render :action => "new" }
+        format.xml  { render :xml => @anuncio.errors, :status => :unprocessable_entity }
+      end
     end
   end
 

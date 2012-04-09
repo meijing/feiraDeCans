@@ -420,3 +420,7 @@ h2{
     display: inline;
     margin-left: 270px;
 }
+
+.anuncio-paginacion .pagination {
+color: red;
+}

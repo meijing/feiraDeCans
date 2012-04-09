@@ -25,7 +25,7 @@ class ContactosController < ApplicationController
   # GET /contactos/new.xml
   def new
     @contacto = Contacto.new
-print("--------------------------------------------")
+
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @contacto }
@@ -41,7 +41,7 @@ print("--------------------------------------------")
   # POST /contactos.xml
   def create
     @contacto = Contacto.new(params[:contacto])
-    print("kkkkkkkkkkkkkkkk")
+    
     respond_to do |format|
       if @contacto.save
         format.html { redirect_to(@contacto, :notice => 'Contacto was successfully created.') }
