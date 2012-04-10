@@ -2,7 +2,7 @@ class AnunciosController < ApplicationController
   # GET /anuncios
   # GET /anuncios.xml
   def index
-@anuncios = Anuncio.paginate(:page => params[:page], :per_page => 10 )
+    @anuncios = Anuncio.paginate(:page => params[:page], :per_page => 10 )
  
     respond_to do |format|
       format.html # index.html.erb
@@ -40,7 +40,6 @@ class AnunciosController < ApplicationController
   # POST /anuncios
   # POST /anuncios.xml
   def create
-    p('------------------')
     @anuncio = Anuncio.new(params[:anuncio])
 
     respond_to do |format|

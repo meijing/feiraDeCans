@@ -1,4 +1,4 @@
-<%= form_for(@contacto) do |f| %>
+<% form_for(@contacto) do |f| %>
   <% if @contacto.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@contacto.errors.count, "error") %> prohibited this contacto from being saved:</h2>
@@ -24,6 +24,6 @@
     <%= f.text_field :texto %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Enviar'%>
   </div>
 <% end %>

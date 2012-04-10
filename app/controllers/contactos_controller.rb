@@ -2,11 +2,11 @@ class ContactosController < ApplicationController
   # GET /contactos
   # GET /contactos.xml
   def index
-    @contactos = Contacto.all
+    @contacto = Contacto.new
 
     respond_to do |format|
       format.html # index.html.erb
-      format.xml  { render :xml => @contactos }
+      format.xml  { render :xml => @contacto }
     end
   end
 
@@ -44,11 +44,10 @@ class ContactosController < ApplicationController
     
     respond_to do |format|
       if @contacto.save
-        format.html { redirect_to(@contacto, :notice => 'Contacto was successfully created.') }
-        format.xml  { render :xml => @contacto, :status => :created, :location => @contacto }
+        ContactoMailer.enviar_contacto().deliver
+        format.html { redirect_to(contactos_url, :notice => 'Mensaxe enviada') }
       else
         format.html { render :action => "new" }
-        format.xml  { render :xml => @contacto.errors, :status => :unprocessable_entity }
       end
     end
   end
