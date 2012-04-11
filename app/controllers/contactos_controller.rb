@@ -44,7 +44,7 @@ class ContactosController < ApplicationController
     
     respond_to do |format|
       if @contacto.save
-        ContactoMailer.enviar_contacto().deliver
+        ContactoMailer.enviar_contacto(@contacto).deliver
         format.html { redirect_to(contactos_url, :notice => 'Mensaxe enviada') }
       else
         format.html { render :action => "new" }
