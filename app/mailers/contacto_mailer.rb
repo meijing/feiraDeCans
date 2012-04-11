@@ -3,6 +3,7 @@ class ContactoMailer < ActionMailer::Base
 
 
   def enviar_contacto()
-    mail(:to => "caminopaula@gmail.com", :subject => "Welcome Site")
+    mail(:to => "caminopaula@gmail.com", :subject => "
+      ")
   end
 end

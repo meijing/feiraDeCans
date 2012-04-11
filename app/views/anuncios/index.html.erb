@@ -12,6 +12,7 @@
       <div class="<%= anuncio.id%2 == 0 ? 'col2' : 'col1' %>">
         <div class="tituloAnuncio"><%= link_to anuncio.titulo, anuncio%></div>
         <div><%= anuncio.texto %></div>
+        
       </div>
     <%end%>
   <%= will_paginate @anuncios, :page_links => false %>

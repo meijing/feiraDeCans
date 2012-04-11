@@ -3,7 +3,7 @@ class AnuncioMailer < ActionMailer::Base
 
   def enviar_anuncio(anuncio)
     @anuncio = anuncio
-    mail :to => "caminopaula@gmail.com", :subject => "Novo anuncio para a feira #{@anuncio.titulo}"
+    mail :to => "caminopaula@gmail.com", :subject => "Novo anuncio para a feira "
   rescue
   end
 end
