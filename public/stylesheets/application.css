@@ -268,20 +268,35 @@
 
 .logo{
     float:left;
-    margin-top: 60px;
+    margin-top: 40px;
+    margin-left: 150px;
+}
+
+.logo img{
+    width: 200px;
+    height: 200px;
 }
 
 .formulario{
     -moz-border-radius:10px;
-    /*border:2px solid lightgray;*/
     width: 500px;
-    height: 350px;
-    margin-left: 400px;
-    margin-top: 80px;
+    height: 250px;
+    margin-left: 570px;
+    margin-top: 40px;
 }
 
 .infoAsociacion{
-    margin-left: 90px;
+    margin-top: 50px;
+}
+
+.infoConcello{
+    float:left;
+    margin-left: 50px;
+}
+
+.logoConcello{
+    float: left;
+    margin-left: 290px;
 }
 
 .programa{
@@ -389,7 +404,6 @@
 
 .pe{
     margin-top: 10px;
-    padding: 5px;
     width: 940px;
     height: 40px;
     border:3px solid yellowgreen;
@@ -400,6 +414,13 @@
 }
 .pe p{
      margin-left: 300px;
+     padding: 0px;
+     margin-top: 0px;
+}
+
+.pe p img{
+    width: 20px;
+    height: 30px;
 }
 
 h1{
