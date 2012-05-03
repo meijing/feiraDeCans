@@ -43,8 +43,8 @@ class AnunciosController < ApplicationController
     @anuncio = Anuncio.new(params[:anuncio])
 
     respond_to do |format|
-      if @anuncio
-        AnuncioMailer.enviar_anuncio(@anuncio).deliver
+      if @anuncio.save
+   #     AnuncioMailer.enviar_anuncio(@anuncio).deliver
         format.html { redirect_to(anuncios_path, :notice => 'O anuncio foi enviado o noso correo. En breve revisaremolo e publicaremolo na web.') }
         format.xml  { render :xml => @anuncio, :status => :created, :location => @anuncio }
       else
