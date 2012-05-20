@@ -163,4 +163,22 @@ class FeirasController < ApplicationController
       format.html # videos.html.erb
     end
   end
+
+  def aves_de_cetreria
+    @feiras = Feira.all
+    @archivos = Dir.getwd+"/public/images/"
+    @archivos = Dir.glob(@archivos+"Aves_de_cetreria_*.jpg")
+    @nomeImaxes = Array.new
+    @contador = 0
+    @archivos.each do |imaxe|
+      @nomeTokens = imaxe.split("/")
+      @nomeImaxes[@contador] = @nomeTokens[@nomeTokens.length-1]
+      @contador = @contador +1
+    end
+
+    @nomeImaxes = @nomeImaxes.sort()
+    respond_to do |format|
+      format.html # campeonato.html.erb
+    end
+  end
 end
